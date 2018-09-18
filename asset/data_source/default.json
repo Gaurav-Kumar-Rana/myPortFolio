@@ -1,0 +1,16 @@
+[{
+    "header":[
+        {"name":"Work Summary","status":true},
+        {"name":"Career Objective","status":true},
+        {"name":"Professional Experiance","status":true},
+        {"name":"Projects Done","status":true},
+        {"name":"Personal Details","status":true},
+        {"name":"Contacts","status":true}
+    ],
+    "bodyConatiner":{
+
+    },
+    "footer":{
+
+    }
+}]
