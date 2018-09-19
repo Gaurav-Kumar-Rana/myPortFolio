@@ -75,3 +75,33 @@ $root-image-path: '/asset/images';
     background-image: url($root-image-path + '/icons/stackoverflow-color.svg');
   }
 }
+.googleplus{
+  background-image: url($root-image-path + '/icons/googleplus.svg');
+  &:hover{
+    background-image: url($root-image-path + '/icons/googleplus-color.svg');
+  }
+}
+.gartner{
+  background-image: url($root-image-path + '/icons/gartner.svg');
+  &:hover{
+    background-image: url($root-image-path + '/icons/gartner-color.svg');
+  }
+}
+.gmail{
+  background-image: url($root-image-path + '/icons/gmail.svg');
+  &:hover{
+    background-image: url($root-image-path + '/icons/gmail-color.svg');
+  }
+}
+.linkedin{
+  background-image: url($root-image-path + '/icons/linkedin.svg');
+  &:hover{
+    background-image: url($root-image-path + '/icons/linkedin-color.svg');
+  }
+}
+.skype{
+  background-image: url($root-image-path + '/icons/skype.svg');
+  &:hover{
+    background-image: url($root-image-path + '/icons/skype-color.svg');
+  }
+}

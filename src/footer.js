@@ -23,18 +23,21 @@ const style = theme => ({
         textDecoration: "underline"
     },
     sectionUl:{
-        display: "inline-table",
+        marginBottom: 20,
         [theme.breakpoints.down('sm')]: {
             marginRight: 0
         },
         [theme.breakpoints.up('md')]: {
-            marginRight: 50
+            marginRight: 50,
+            display: "inline-table",
         }
     },
     sectionList:{
-        width: 64,
+        width: 36,
+        height: 36,
         display: "inline-flex",
-        paddingLeft:0
+        boxSizing: "content-box",
+        padding: "10px 16px"
     }
 });
 class Footer extends React.Component {
