@@ -1,3 +1,4 @@
+$root-image-path: '/asset/images';
 .text-left{
   text-align: left;
 }
@@ -22,4 +23,55 @@
 .marginLR0{
   margin-left:0px;
   margin-right:0px;
+}
+.fullWidth{
+  width: 100%;
+}
+//Social Media Icons
+
+.footer-icon {
+  height: 36px;
+  width: 36px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 3px;
+  transition: 0.3s all;
+}
+.facebook{
+  background-image: url($root-image-path + '/icons/facebook.svg');
+  &:hover{
+    background-image: url($root-image-path + '/icons/facebook-color.svg');
+  }
+}
+.instagram{
+  background-image: url($root-image-path + '/icons/instagram.svg');
+  &:hover{
+    background-image: url($root-image-path + '/icons/instagram-color.svg');
+  }
+}
+.twitter{
+  background-image: url($root-image-path + '/icons/twitter.svg');
+  &:hover{
+    background-image: url($root-image-path + '/icons/twitter-color.svg');
+  }
+}
+.hackerrank{
+  background-image: url($root-image-path + '/icons/hackerrank.svg');
+  &:hover{
+    background-image: url($root-image-path + '/icons/hackerrank-color.svg');
+  }
+}
+.github{
+  background-image: url($root-image-path + '/icons/github.svg');
+  &:hover{
+    background-image: url($root-image-path + '/icons/github-color.svg');
+  }
+}
+.stackoverflow{
+  background-image: url($root-image-path + '/icons/stackoverflow.svg');
+  &:hover{
+    background-image: url($root-image-path + '/icons/stackoverflow-color.svg');
+  }
 }

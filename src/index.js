@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import defaultWebSettings from '../src/data_source/websettings';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App settings={defaultWebSettings}/>, document.getElementById('root'));

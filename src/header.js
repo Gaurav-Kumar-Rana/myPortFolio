@@ -16,7 +16,6 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
-import Popover from '@material-ui/core/Popover';
 
 import {Pic} from './utility';
 
@@ -55,30 +54,19 @@ class Header extends React.Component {
             top: false,
             left: false,
             bottom: false,
-            right: false,
-            openpopover:false
+            right: false
         };
     }
     toggleDrawer = (side, open) => () => {
         this.setState({
           [side]: open,
         });
-      };
-    togglePopover = () => () => {
-        this.setState({
-            openpopover:!this.state.openpopover
-
-        })
-    }
-    handleClickButton = () => () =>{
-        this.setState({
-            openpopover: false,
-        });
     };
+
     render(){
-        const { classes } = this.props;
+        const { classes,settings } = this.props;
         const metadata = this.props.metadata.header;
-        const profile_Details = this.props.metadata.bodyConatiner.Profile_Details;
+        const profile_Details = this.props.metadata.body_conatiner.profile_details;
         const picURL = profile_Details.pic;
         
         return(
@@ -86,27 +74,9 @@ class Header extends React.Component {
                 <AppBar position="static" color="default">
                     <Toolbar>
                         <Hidden only={['sm','xs']}>
-                            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onMouseEnter={this.togglePopover()}>
+                            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
                                 <Pic picURL={picURL} />
                             </IconButton>
-                            <Popover
-                                open={this.state.openpopover}
-                                onClose={this.handleClickButton()}
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'left',
-                                }}
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                            >
-                            <List className={classes.profile_Details}>
-                                <ListItem className={"paddingLR0 " + classes.font14}>{profile_Details.name}</ListItem>
-                                <ListItem className={"padding0 " + classes.font12}>{profile_Details.profile_title}</ListItem>
-                                <ListItem className={"paddingLR0 " + classes.font10}>{profile_Details.email}</ListItem>
-                            </List>
-                            </Popover>
                         </Hidden>
                         <Hidden only={['md','lg']}>
                             <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={this.toggleDrawer('left', true)}>
@@ -114,7 +84,7 @@ class Header extends React.Component {
                             </IconButton>
                         </Hidden>
                         <Typography variant="title" color="inherit" className={classes.grow}>
-                            <div className="text-left">Portfolio</div>
+                            <div className="text-left">{this.props.settings.website_heading}</div>
                         </Typography>
                         <Hidden only={['sm','xs']}>
                             {metadata.map((menu,key) => (menu.status?<Button key={key} color="inherit">{menu.name}</Button>:null))}    
@@ -146,6 +116,7 @@ class Header extends React.Component {
 }
 Header.propTypes = {
     classes: PropTypes.object.isRequired,
-    metadata:PropTypes.object.isRequired
+    metadata:PropTypes.object.isRequired,
+    settings:PropTypes.object.isRequired
   };
 export default withStyles(styles)(Header);
