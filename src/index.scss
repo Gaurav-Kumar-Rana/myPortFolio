@@ -1,6 +1,29 @@
+$root-image-path: '/asset/images';
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url($root-image-path + "/bg.png");
 }
+@import './data_source/icons.css';
 @import 'App';
+.App{
+  overflow: hidden;
+  position: relative
+}
+
+@media (min-width:960px) {
+  .left-menu-opened + main{
+    padding-left:250px;
+  }
+  .left-menu-closed + main{
+    padding-left:16px;
+  }
+  .left-menu-opened + main + footer{
+    padding-left:250px;
+  }
+  .left-menu-closed + main + footer{
+    padding-left:16px;
+  }
+}
+

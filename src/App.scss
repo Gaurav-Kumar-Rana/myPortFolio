@@ -1,4 +1,3 @@
-$root-image-path: '/asset/images';
 .text-left{
   text-align: left;
 }
@@ -17,18 +16,30 @@ $root-image-path: '/asset/images';
   padding-left:0px;
   padding-right:0px;
 }
+.paddingLR0{
+  padding-left:0px;
+  padding-right:0px;
+}
+.paddingLR16{
+  padding-left:0px;
+  padding-right:0px;
+}
 .margin0{
   margin:0px;
 }
-.marginLR0{
-  margin-left:0px;
-  margin-right:0px;
+.marginLR16{
+  margin-left:16px;
+  margin-right:16px;
 }
 .fullWidth{
   width: 100%;
 }
+.menu-icon {
+  font-style: normal;
+  font-size: 20px;
+  padding-right: 8px;
+}
 //Social Media Icons
-
 .footer-icon {
   height: 36px;
   width: 36px;

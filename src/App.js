@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         {<Header metadata={defaultProfile} settings={settings}/>}
-        {/* {<BodyContailer metadata={this.state.metabodydata}/> */}
+        {<BodyContailer metadata={defaultProfile} settings={settings}/>}
         {<Footer metadata={defaultProfile} settings={settings}/>}
       </div>
     );

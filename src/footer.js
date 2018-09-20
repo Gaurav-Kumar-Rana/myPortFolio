@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
+//Material Components
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-
-import {FooterIcon} from './utility';
+//Custom Components
+import {FooterIcon,FullYear} from './utility';
 
 const style = theme => ({
     root:{
@@ -44,9 +44,10 @@ class Footer extends React.Component {
     render(){
         const {classes,metadata,settings} = this.props;        
         const footer = settings.wbsite_footer;
+        const patronName = metadata.body_conatiner.profile_details.name;
         let index = 0;
         return(
-            <div variant="div" className={classes.root}>
+            <footer className={classes.root}>
                 <Typography variant="title" className={classes.footHeading}>{footer.title}</Typography>
                 {
                     footer.sections.map((sec,key) => (
@@ -55,15 +56,16 @@ class Footer extends React.Component {
                             <Typography variant="body2" className={classes.footSubHeading}>{sec}</Typography>
                             {
                                 metadata.footer[sec.toLocaleLowerCase()].map((sol) =>(
-                                    <ListItem key={index++} className={classes.sectionList}>
+                                    sol.status ? <ListItem key={index++} className={classes.sectionList}>
                                         <FooterIcon type={sol.name.toLocaleLowerCase()} title={sol.name} url={sol.url}/>
-                                    </ListItem>
+                                    </ListItem> : null
                                 ))
                             }
                         </List> : null
                     ))
                 }
-            </div>
+                <Typography component="div">{footer.copyright}<span>{" " + patronName + " "}</span><FullYear /></Typography>
+            </footer>
         )
     }
 }

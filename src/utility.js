@@ -6,6 +6,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 function stringTrim(string){
     return string.split(' ').join('');
 }
+
 //Profile pic component
 export const Pic = (props) => {
     return(
@@ -20,5 +21,12 @@ export const FooterIcon = (props) => {
                 <i className={"footer-icon " + stringTrim(props.type)}></i>
             </a>
         </Tooltip>
+    )
+}
+
+export const FullYear = () =>{
+    let fullYear = new Date();
+    return (
+        <span>{""+ fullYear.getFullYear()+""}</span>
     )
 }

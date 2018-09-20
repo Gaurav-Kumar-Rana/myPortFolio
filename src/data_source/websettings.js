@@ -1,17 +1,28 @@
 const defaultWebSettings = {
-    website_heading:"Portfolio",
+    website_header:{
+        heading:"Portfolio",
+        menuicon:"asset/images/icons/menuicon.svg",
+        Appbar:{
+            position:"fixed",
+            color:"default"
+        },
+        Drawer:{
+            open:true,
+            variant:"persistent", 
+            anchor:"left"
+        }
+    },
+    website_body:{
+        action_btns:[
+            {name:"Action",status:true,type:"primary", variant:"contained"},
+            {name:"Link",status:true,type:"primary", variant:"outlined"}
+        ]
+    },
     wbsite_footer:{
         title:"Folllow on",
         sections:["Social","Community","Email","Blog","Professional"],
+        copyright:["©"]
     }
 };
-
-// const defaultWebSettings = {
-//     website_heading:"Sample",
-//     wbsite_footer:{
-//         title:"Folllow on",
-//         sections:["Social","Community","Email","Blog","Professional"],
-//     }
-// };
 
 export default defaultWebSettings;
