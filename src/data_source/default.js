@@ -1,25 +1,32 @@
 const defaultProfile = {
     header:[
-        {name:"About",status:true,icon:"icon-about"},
-        {name:"Experiance",status:true,icon:"icon-experiance"},
-        {name:"Projects",status:true,icon:"icon-projects"},
-        {name:"Skill",status:true,icon:"icon-skill"},
-        {name:"Awards",status:true,icon:"icon-awards"},
-        {name:"Education",status:true,icon:"icon-education"},
-        {name:"Contact",status:true,icon:"icon-contact"},
-        {name:"Resume",status:true,icon:"icon-resume"}
+        {name:"About",status:true,icon:"icon-about", color:"#008073"},
+        {name:"Experiance",status:true,icon:"icon-experiance", color:"#00bcd4"},
+        {name:"Projects",status:true,icon:"icon-projects",color:"#3f51b5"},
+        {name:"Skill",status:true,icon:"icon-skill",color:"#9c27b0"},
+        {name:"Awards",status:true,icon:"icon-awards",color:"#F44336"},
+        {name:"Education",status:true,icon:"icon-education",color:"#ff9800"},
+        {name:"Contact",status:true,icon:"icon-contact",color:"#795548"},
+        {name:"Resume",status:true,icon:"icon-resume",color:"#424242"}
     ],
     body_conatiner:{
         profile_details:{
+            welcomemsg:"",
             name:"Gaurav Kumar Rana",
             pic:"asset/images/pic.png",
             profile_title:"Front End Developer",
             email:"gauravforcs@gmail.com",
             profile_tagline:[
-                {tagline:"Hello, my name is Gaurav. I am Front End / UI / UX Developer living in chennai,TN."},
+                {tagline:"I am Front End / UI / UX Developer."},
                 {tagline:"I'm passionate about making things that make an impact."},
-                {tagline:"I build awesome things for Web and Mobile. I am currently working as a Front-End Developer at <a href='https://www.gartner.com/en/about' target='alt'>Gartner."}
-            ]
+                {tagline:"I build awesome things for Web and Mobile."}
+            ],
+            About:{
+                status:true,
+                heading:{
+                    text:"About",
+                }
+            }   
         }
     },
     footer:{

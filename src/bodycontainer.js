@@ -10,19 +10,50 @@ import ListItem from '@material-ui/core/ListItem';
 const style = theme => ({
     root:{
         flexGrow: 1,
-        padding: "0 16px",
+        padding: "0",
         textAlign: "center",
-        marginTop:64,
-        transition: "transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms"
+        marginTop:50,
+        transition: "transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms",
+        backgroundImage:"url('/asset/images/slide1.png')",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        backgroundPosition:"center"
+    },
+    brief:{
+        display: "table",
+        width: "100%",
+        height:"calc(100vh - 50px)",
+
+    },
+    briefchild:{
+        display: "table-cell",
+        verticalAlign:"middle",
+        paddingBottom: 200
     },
     headertag:{
         paddingTop:"2rem",
         lineHeight: "4.5rem"
     },
+    taglineconatiner:{
+        
+        [theme.breakpoints.down('sm')]: {
+            width: "85%",
+        },
+        [theme.breakpoints.up('md')]: {
+            width: "50%",
+        },
+        margin: "0px auto",
+        background: "#f5f5f5cc",
+        padding: "7px",
+        borderRadius: "3px",
+        backgroundImage: "url(/asset/images/bg.png)",
+        boxShadow: "0px 1px 3px 0px #000"
+    },
     tagline:{
-        margin: 0,
         lineHeight: 1.7,
-        fontSize: "1.3125rem"
+        fontSize: "1.3125rem",
+        margin:4
     },
     actionbtn:{
         margin:8
@@ -38,12 +69,16 @@ class BodyContainer extends React.Component {
         const btns = bodySettings.action_btns;
         return(
             <main className={classes.root}>
-                <Typography variant="display3" className={classes.headertag}>
-                    {profileName}
-                </Typography>
-                <Typography component="div">
-                    {tags.map((tag,key) => (<p key={key} className={classes.tagline}>{tag.tagline}</p>))}
-                    {btns.map((btn,key)=>(btn.status?<Button key={key} variant={btn.variant} color={btn.type} className={classes.actionbtn}>{btn.name}</Button>:null))}
+                <Typography component="div" className={classes.brief}>
+                    <div className={classes.briefchild}>
+                        {/* <Typography variant="display3" className={classes.headertag}>
+                        {false?profileName:null}
+                        </Typography> */}
+                        <p className={classes.taglineconatiner}>
+                            {tags.map((tag,key) => (<p key={key} className={classes.tagline}>{tag.tagline}</p>))}
+                            {btns.map((btn,key)=>(btn.status?<Button key={key} variant={btn.variant} color={btn.type} className={classes.actionbtn}>{btn.name}</Button>:null))}
+                        </p>
+                    </div>
                 </Typography>
                 <Typography component="div">
                     sdfs

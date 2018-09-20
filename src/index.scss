@@ -7,23 +7,34 @@ body {
 }
 @import './data_source/icons.css';
 @import 'App';
+
 .App{
   overflow: hidden;
   position: relative
 }
 
+.menuList{
+  & > div{
+    transition: 0.5s all;
+    &:hover,.active{
+      border-left:3px solid gray;
+      font-weight: 700;
+    }
+  }
+}
+
 @media (min-width:960px) {
   .left-menu-opened + main{
-    padding-left:250px;
+    padding-left:245px;
   }
   .left-menu-closed + main{
-    padding-left:16px;
+    padding-left:0;
   }
   .left-menu-opened + main + footer{
-    padding-left:250px;
+    padding-left:245px;
   }
   .left-menu-closed + main + footer{
-    padding-left:16px;
+    padding-left:0;
   }
 }
 

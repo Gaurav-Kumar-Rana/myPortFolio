@@ -36,11 +36,15 @@ const styles = theme => ({
     profile_Details:{
         padding:16,
     },
-    font14:{
-        fontSize:14
+    font24:{
+        fontSize:24,
+        color: "#008073",
+        fontWeight: "normal",
+        fontFamily: "cursive"
     },
     font12:{
-        fontSize:12
+        fontSize:16,
+        color:"#795548"
     },
     font10:{
         fontSize:10
@@ -80,7 +84,7 @@ class Header extends React.Component {
             <div className={this.state.left ? "left-menu-opened ":"left-menu-closed " + classes.root} >
                 <AppBar position={headSetting.Appbar.position} color={headSetting.Appbar.color}>
                     <Toolbar>
-                        <Hidden only={['sm','xs']}>
+                        {/* <Hidden only={['sm','xs']}>
                             <IconButton 
                                 className={classes.menuButton} 
                                 color="inherit" aria-label="Menu" 
@@ -90,12 +94,15 @@ class Header extends React.Component {
                                 >
                                 <Pic picURL={this.state.picURL}/>
                             </IconButton>
-                        </Hidden>
-                        <Hidden only={['md','lg']}>
+                        </Hidden> */}
+                         <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={this.toggleDrawer(headSetting.Drawer.anchor, true)}>
+                                <MenuIcon />
+                        </IconButton>
+                        {/* <Hidden only={['md','lg']}>
                             <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={this.toggleDrawer(headSetting.Drawer.anchor, true)}>
                                 <MenuIcon />
                             </IconButton>
-                        </Hidden>
+                        </Hidden> */}
                         <Typography variant="title" color="inherit" className={classes.grow}>
                             <div className="text-left">{headSetting.heading}</div>
                         </Typography>
@@ -109,7 +116,7 @@ class Header extends React.Component {
                     onClick={this.toggleDrawer(headSetting.Drawer.anchor, false)} 
                     variant={headSetting.Drawer.variant} 
                     anchor={headSetting.Drawer.anchor}>
-                    {
+                    {/* {
                         headSetting.Drawer.variant !== "permanent" ?
                         <IconButton tabIndex={0} className={classes.menuButton + " sidebar-closebtn"} color="inherit" onClick={this.toggleDrawer(headSetting.Drawer.anchor, false)}>
                             <CloseIcon />
@@ -118,20 +125,28 @@ class Header extends React.Component {
                         <Typography variant="headline" color="inherit">
                             <div className="text-left marginLR16">{headSetting.heading}</div>
                         </Typography>
-                    }
+                    } */}
+                    <IconButton tabIndex={0} className={classes.menuButton + " sidebar-closebtn"} color="inherit" onClick={this.toggleDrawer(headSetting.Drawer.anchor, false)}>
+                        <CloseIcon />
+                    </IconButton>
                     <Typography className={classes.profile_Details} component="div">
-                        <IconButton color="inherit" aria-label="Profile pic">
+                        {/* <IconButton color="inherit" aria-label="Profile pic">
                             <Pic picURL={picURL}/>
-                        </IconButton>
+                        </IconButton> */}
                         <List>
-                            <ListItem className={"paddingLR0 " + classes.font14}>{profile_Details.name}</ListItem>
+                            <ListItem className={"paddingLR0 " + classes.font24}>{profile_Details.name}</ListItem>
                             <ListItem className={"padding0 " + classes.font12}>{profile_Details.profile_title}</ListItem>
-                            <ListItem className={"paddingLR0 " + classes.font10}>{profile_Details.email}</ListItem>
+                            {/* <ListItem className={"paddingLR0 " + classes.font10}>{profile_Details.email}</ListItem> */}
                         </List>
                     </Typography>
                     <Divider />
-                    <List className={classes.list}>
-                        {metadata.map((menu,key) => (menu.status?<ListItem button key={key} color="inherit"><i className={"menu-icon "+ menu.icon}></i>{menu.name}</ListItem >:null))}
+                    <List className={classes.list} className="menuList">
+                        {metadata.map((menu,key) => (
+                            menu.status ?
+                            <ListItem button key={key} color="inherit"><i className={"menu-icon "+ menu.icon} style={{"color": menu.color}}></i>{menu.name}</ListItem >
+                            :
+                            null))
+                        }
                     </List>
                 </Drawer>
             </div>

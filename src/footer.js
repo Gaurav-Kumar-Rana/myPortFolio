@@ -13,7 +13,7 @@ const style = theme => ({
         flexGrow: 1,
         padding:16,
         textAlign: "center",
-        backgroundColor: "antiquewhite",
+        backgroundColor: "rgba(250, 235, 215, 0.4)",
         marginTop: 30
     },
     footHeading:{

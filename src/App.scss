@@ -3,8 +3,7 @@
 }
 .sidebar-closebtn{
   margin: 0px;
-  position: absolute;
-  right: 0px;
+  margin-left: calc(100% - 49px);
 }
 .round-shape{
   border-radius: 50%;
