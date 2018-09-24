@@ -1,0 +1,54 @@
+{
+    "header":[
+        {"name":"About","status":true,"icon":"icon-about", "color":"#008073"},
+        {"name":"Experiance","status":true,"icon":"icon-experiance", "color":"#00bcd4"},
+        {"name":"Projects","status":true,"icon":"icon-projects","color":"#3f51b5"},
+        {"name":"Skill","status":true,"icon":"icon-skill","color":"#9c27b0"},
+        {"name":"Awards","status":true,"icon":"icon-awards","color":"#F44336"},
+        {"name":"Education","status":true,"icon":"icon-education","color":"#ff9800"},
+        {"name":"Contact","status":true,"icon":"icon-contact","color":"#795548"},
+        {"name":"Resume","status":true,"icon":"icon-resume","color":"#424242"}
+    ],
+    "body_conatiner":{
+        "profile_details":{
+            "welcomemsg":"",
+            "name":"Gaurav Kumar Rana",
+            "pic":"asset/images/pic.png",
+            "profile_title":"Front End Developer",
+            "email":"gauravforcs@gmail.com",
+            "profile_tagline":[
+                {"tagline":"I am Front End / UI / UX Developer."},
+                {"tagline":"I'm passionate about making things that make an impact."},
+                {"tagline":"I build awesome things for Web and Mobile."}
+            ],
+            "About":{
+                "status":true,
+                "heading":{
+                    "text":"About"
+                }
+            }   
+        }
+    },
+    "footer":{
+        "social":[
+            {"name":"Facebook","status":true,"url":"https://www.facebook.com/gaurav.evergreen"},
+            {"name":"Instagram","status":true,"url":"https://www.instagram.com/rana.gaurav17/"},
+            {"name":"Twitter","status":true,"url":"#"},
+            {"name":"Google Plus","status":true,"url":"https://plus.google.com/+gauravkumarRanaranagaurav17"}
+        ],
+        "community":[
+            {"name":"Hacker Rank","status":true,"url":"https://www.hackerrank.com/windo_gaurav?hr_r=1"},
+            {"name":"Git Hub","status":true,"url":"https://github.com/Gaurav-Kumar-Rana"},
+            {"name":"Stackoverflow","status":true,"url":"#"}
+        ],
+        "email":[
+            {"name":"Gmail","status":true,"url":"mailto:rana.gaurav17@gmail.com"},
+            {"name":"Gartner","status":true,"url":"mailto:gaurav.rana@gartner.com"}
+        ],
+        "blog":[],
+        "professional":[
+            {"name":"Linkedin","status":true,"url":"https://www.linkedin.com/in/gaurav-rana-b841457b/"},
+            {"name":"Skype","status":true,"url":"https://join.skype.com/invite/L8fl5B8VRbx7"}
+        ]
+    }
+};

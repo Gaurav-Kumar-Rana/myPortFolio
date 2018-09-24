@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import BodyContailer from './bodycontainer';
 import Footer from './footer';
+//import defaultProfile from '../asset/data_source/default';
 import defaultProfile from './data_source/default';
 
 //console.log(defaultProfile);

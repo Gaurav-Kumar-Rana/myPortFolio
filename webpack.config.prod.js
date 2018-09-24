@@ -1,6 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
@@ -39,6 +40,9 @@ module.exports = {
         new MiniCssExtractPlugin({
           publicPath:'../asset/css',
           filename:'../asset/css/main.css'
-        })
+        }),
+        new CopyWebpackPlugin([
+            {from:'src/data_source',to:'asset/data_source'} 
+        ]), 
       ],
 }

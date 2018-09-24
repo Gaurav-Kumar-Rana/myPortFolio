@@ -10,7 +10,7 @@ module.exports = {
     devtool:'source-map',
     devServer: {
         host: 'localhost',
-        port: 80,
+        port: 8998,
         historyApiFallback: true,
     },
     entry:['./src/index.js','./src/index.scss'],

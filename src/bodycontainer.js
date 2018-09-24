@@ -74,10 +74,10 @@ class BodyContainer extends React.Component {
                         {/* <Typography variant="display3" className={classes.headertag}>
                         {false?profileName:null}
                         </Typography> */}
-                        <p className={classes.taglineconatiner}>
+                        <div className={classes.taglineconatiner}>
                             {tags.map((tag,key) => (<p key={key} className={classes.tagline}>{tag.tagline}</p>))}
                             {btns.map((btn,key)=>(btn.status?<Button key={key} variant={btn.variant} color={btn.type} className={classes.actionbtn}>{btn.name}</Button>:null))}
-                        </p>
+                        </div>
                     </div>
                 </Typography>
                 <Typography component="div">

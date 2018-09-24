@@ -23,6 +23,9 @@ const styles = theme => ({
         //flexGrow: 1,
         //display:"none"
     },
+    drawer:{
+        width:245
+    },
     grow: {
         flexGrow: 1,
     },
@@ -35,6 +38,9 @@ const styles = theme => ({
     },
     profile_Details:{
         padding:16,
+        width: "15vw",
+        minWidth: "220px",
+        boxSizing: "border-box"
     },
     font24:{
         fontSize:24,
@@ -111,7 +117,7 @@ class Header extends React.Component {
                         </Hidden>
                     </Toolbar>
                 </AppBar>
-                <Drawer 
+                <Drawer className={classes.drawer}
                     open={this.state.left} 
                     onClick={this.toggleDrawer(headSetting.Drawer.anchor, false)} 
                     variant={headSetting.Drawer.variant} 

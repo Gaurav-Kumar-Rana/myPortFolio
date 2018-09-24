@@ -25,13 +25,13 @@ body {
 
 @media (min-width:960px) {
   .left-menu-opened + main{
-    padding-left:245px;
+    padding-left:15vw;
   }
   .left-menu-closed + main{
     padding-left:0;
   }
   .left-menu-opened + main + footer{
-    padding-left:245px;
+    padding-left:15vw;
   }
   .left-menu-closed + main + footer{
     padding-left:0;

@@ -1,32 +1,202 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/asset/css/icomoon/icomoon.eot?cj3nr4');
+  src:  url('/asset/css/icomoon/icomoon.eot?cj3nr4#iefix') format('embedded-opentype'),
+    url('/asset/css/icomoon/icomoon.ttf?cj3nr4') format('truetype'),
+    url('/asset/css/icomoon/icomoon.woff?cj3nr4') format('woff'),
+    url('/asset/css/icomoon/icomoon.svg?cj3nr4#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-avatar:before {
+  content: "\E900";
+}
+.icon-about:before {
+  content: "\E901";
+}
+.icon-awards:before {
+  content: "\E902";
+}
+.icon-mail:before {
+  content: "\E903";
+}
+.icon-email:before {
+  content: "\E903";
+}
+.icon-letter:before {
+  content: "\E903";
+}
+.icon-envelope:before {
+  content: "\E903";
+}
+.icon-contact:before {
+  content: "\E903";
+}
+.icon-education:before {
+  content: "\E904";
+}
+.icon-experiance:before {
+  content: "\E905";
+}
+.icon-menuicon:before {
+  content: "\E928";
+}
+.icon-projects:before {
+  content: "\E929";
+}
+.icon-resume:before {
+  content: "\E92A";
+}
+.icon-skill:before {
+  content: "\E92B";
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  background-image: url("/asset/images/bg.png"); }
+
+.text-left {
+  text-align: left; }
+
+.sidebar-closebtn {
+  margin: 0px;
+  margin-left: calc(100% - 49px); }
+
+.round-shape {
+  border-radius: 50%; }
+
+.padding0 {
+  padding: 0px; }
+
+.paddingLR0 {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.paddingLR0 {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.paddingLR16 {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.margin0 {
+  margin: 0px; }
+
+.marginLR16 {
+  margin-left: 16px;
+  margin-right: 16px; }
+
+.fullWidth {
+  width: 100%; }
+
+.menu-icon {
+  font-style: normal;
+  font-size: 20px;
+  padding-right: 8px; }
+
+.footer-icon {
+  height: 36px;
+  width: 36px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 3px;
+  transition: 0.3s all; }
+
+.facebook {
+  background-image: url("/asset/images/icons/facebook.svg"); }
+  .facebook:hover {
+    background-image: url("/asset/images/icons/facebook-color.svg"); }
+
+.instagram {
+  background-image: url("/asset/images/icons/instagram.svg"); }
+  .instagram:hover {
+    background-image: url("/asset/images/icons/instagram-color.svg"); }
+
+.twitter {
+  background-image: url("/asset/images/icons/twitter.svg"); }
+  .twitter:hover {
+    background-image: url("/asset/images/icons/twitter-color.svg"); }
+
+.hackerrank {
+  background-image: url("/asset/images/icons/hackerrank.svg"); }
+  .hackerrank:hover {
+    background-image: url("/asset/images/icons/hackerrank-color.svg"); }
+
+.github {
+  background-image: url("/asset/images/icons/github.svg"); }
+  .github:hover {
+    background-image: url("/asset/images/icons/github-color.svg"); }
+
+.stackoverflow {
+  background-image: url("/asset/images/icons/stackoverflow.svg"); }
+  .stackoverflow:hover {
+    background-image: url("/asset/images/icons/stackoverflow-color.svg"); }
+
+.googleplus {
+  background-image: url("/asset/images/icons/googleplus.svg"); }
+  .googleplus:hover {
+    background-image: url("/asset/images/icons/googleplus-color.svg"); }
+
+.gartner {
+  background-image: url("/asset/images/icons/gartner.svg"); }
+  .gartner:hover {
+    background-image: url("/asset/images/icons/gartner-color.svg"); }
+
+.gmail {
+  background-image: url("/asset/images/icons/gmail.svg"); }
+  .gmail:hover {
+    background-image: url("/asset/images/icons/gmail-color.svg"); }
+
+.linkedin {
+  background-image: url("/asset/images/icons/linkedin.svg"); }
+  .linkedin:hover {
+    background-image: url("/asset/images/icons/linkedin-color.svg"); }
+
+.skype {
+  background-image: url("/asset/images/icons/skype.svg"); }
+  .skype:hover {
+    background-image: url("/asset/images/icons/skype-color.svg"); }
 
 .App {
-  text-align: center; }
+  overflow: hidden;
+  position: relative; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
+.menuList > div {
+  transition: 0.5s all; }
+  .menuList > div:hover, .menuList > div .active {
+    border-left: 3px solid gray;
+    font-weight: 700; }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white; }
-
-.App-title {
-  font-size: 1.5em; }
-
-.App-intro {
-  font-size: large; }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+@media (min-width: 960px) {
+  .left-menu-opened + main {
+    padding-left: 15vw; }
+  .left-menu-closed + main {
+    padding-left: 0; }
+  .left-menu-opened + main + footer {
+    padding-left: 15vw; }
+  .left-menu-closed + main + footer {
+    padding-left: 0; } }
 
 
 /*# sourceMappingURL=main.css.map*/
