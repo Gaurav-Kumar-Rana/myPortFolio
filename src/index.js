@@ -1,7 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-//import defaultWebSettings from '../asset/data_source/websettings';
-import defaultWebSettings from '../src/data_source/websettings';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
-ReactDOM.render(<App settings={defaultWebSettings}/>, document.getElementById('root'));
+import App from './App';
+import { store } from './store';
+
+ReactDOM.render(
+    <Provider store={store}>
+        <Router>
+            <Switch>
+                <Route path="/" component={App} />
+                <Redirect to="/default"/>
+            </Switch>
+            
+        </Router>
+    </Provider>,
+    document.getElementById('root')
+);

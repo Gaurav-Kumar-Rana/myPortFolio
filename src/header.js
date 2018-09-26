@@ -119,7 +119,7 @@ class Header extends React.Component {
                 </AppBar>
                 <Drawer className={classes.drawer}
                     open={this.state.left} 
-                    onClick={this.toggleDrawer(headSetting.Drawer.anchor, false)} 
+                    // onClick={this.toggleDrawer(headSetting.Drawer.anchor, false)} 
                     variant={headSetting.Drawer.variant} 
                     anchor={headSetting.Drawer.anchor}>
                     {/* {

@@ -9,15 +9,10 @@ module.exports = {
     watch:true,
     mode:'production',
     devtool:'source-map',
-    devServer: {
-        host: 'localhost',
-        port: 80,
-        historyApiFallback: true,
-    },
     entry:['./src/index.js','./src/index.scss'],
     output:{
         publicPath:'../asset/js',
-        filename:'../asset/js/index.build.js'
+        filename:'../asset/js/index.bundle.js'
     },
     module:{
         rules:[{ 
@@ -42,7 +37,8 @@ module.exports = {
           filename:'../asset/css/main.css'
         }),
         new CopyWebpackPlugin([
-            {from:'src/data_source',to:'asset/data_source'} 
+            {from:'src/data_source',to:'../asset/data_source'},
+            {from:'asset',to:'../build/asset'}  
         ]), 
       ],
 }
